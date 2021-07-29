@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Planta zebra - Aprenda a cuidar desta suculenta ornamental _ A Senhora do Monte.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
