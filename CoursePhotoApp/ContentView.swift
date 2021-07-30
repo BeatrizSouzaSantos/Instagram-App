@@ -12,6 +12,32 @@ struct ContentView: View {
         ZStack {
             VStack {
                 NavigationBarView()
+                VStack {
+                    HStack{
+                        Image(uiImage: #imageLiteral(resourceName: "WhatsApp Image 2021-07-29 at 10.55.44"))
+                            //redimensionando
+                            .resizable()
+                        //arredondando bordas
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .frame(width: 36, height: 36)
+                        VStack(alignment: .leading){
+                            Text("nille_f")
+                                //modificando usuario
+                                //colocando em negrito
+                                .font(.footnote).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            HStack{
+                                Text("London, England")
+                                    //modificando o usuario
+                                    .font(.footnote).fontWeight(.light)
+                                Spacer()
+                                Text("2 minutes ago")
+                            }
+                        }
+                    }
+                    //redimensionando
+                    .padding(.leading)
+                    .padding(.trailing)
+                }
                 Spacer()
             }
         }
@@ -31,7 +57,7 @@ struct NavigationBarView: View {
                     Image(systemName: "camera")
                         //redimensionavel
                         .resizable()
-                        //redimencionando
+                        //redimensionando
                         .frame(width: 25, height: 20)
                 }
                 .foregroundColor(.black)
@@ -65,3 +91,4 @@ struct NavigationBarView: View {
         }
     }
 }
+
