@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+func screenSize() -> CGSize {
+    return UIScreen.main.bounds.size
+}
+
 struct ContentView: View {
     var body: some View {
         ZStack {
@@ -18,26 +22,41 @@ struct ContentView: View {
                             //redimensionando
                             .resizable()
                         //arredondando bordas
+                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .frame(width: 36, height: 36)
+                            .padding(.leading)
                         VStack(alignment: .leading){
-                            Text("nille_f")
+                            Text("ssouzab_")
                                 //modificando usuario
                                 //colocando em negrito
                                 .font(.footnote).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             HStack{
-                                Text("London, England")
+                                Text("Sao Paulo, Brasil")
                                     //modificando o usuario
-                                    .font(.footnote).fontWeight(.light)
+                                    .font(.footnote)
+                                    .foregroundColor(.secondary)
                                 Spacer()
                                 Text("2 minutes ago")
+                                    .padding(.trailing)
+                                    .font(.footnote)
+                                    .foregroundColor(.primary)
+                                    
                             }
                         }
                     }
-                    //redimensionando
-                    .padding(.leading)
-                    .padding(.trailing)
+                    Image(uiImage: #imageLiteral(resourceName: "Planta zebra - Aprenda a cuidar desta suculenta ornamental _ A Senhora do Monte"))
+                        .resizable()
+                        //redimensionamento da imagem
+                        .frame(width: 430,height: 400)
+                        
+                        
+
                 }
+                //redimensionando
+                .padding(.leading)
+                .padding(.trailing)
+                
                 Spacer()
             }
         }
